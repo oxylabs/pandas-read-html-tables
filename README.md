@@ -14,7 +14,7 @@
 
 This tutorial will show you how useful pandas `read_html` can be, especially when combined with other helpful functions.
 
-For a detailed explanation, see our [blog post](https://oxylabs.io/blog/pandas-read-html-tables).
+For a detailed explanation, see our [blog post](https://oxy.yt/hrFW).
 
 ## Getting Started
 
@@ -257,4 +257,4 @@ top_df.plot.barh(x='Author',y='BookCount',figsize=(12,5))
 ![Authors with three or more books in Top 100 list](https://oxylabs.io/blog/images/2021/09/image8_author_chart.png)
 
 
-If you wish to find out more about How to Read HTML Tables with Pandas, see our [blog post](https://oxylabs.io/blog/pandas-read-html-tables).
+If you wish to find out more about How to Read HTML Tables with Pandas, see our [blog post](https://oxy.yt/hrFW).
