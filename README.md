@@ -117,7 +117,7 @@ $ python3 read_html.py
 
 If you’re using Jupyter Notebook, the output of the same command will have a better appearance.
 
-![pandas DataFrame created from string](https://oxylabs.io/blog/images/2021/09/image1_df_from_string.png)
+![pandas DataFrame created from string](https://images.prismic.io/oxylabs-sm/MDAzMjY5ZTctMTJjMy00ZWQwLWE5YWQtMzQ5MzU0NTFhODQw_image1_df_from_string.png?auto=compress,format&rect=0,0,1392,296&w=1392&h=296&fm=webp&q=75)
 
 ## Cleanup and processing of HTML table data
 
@@ -129,7 +129,7 @@ population = df_list[0].set_index('Sequence')
 
 Once again, let’s take a look at the output from the Jupyter Notebook of this new DataFrame.
 
-![pandas DataFrame after updating index column](https://oxylabs.io/blog/images/2021/09/image2_fixed_index_column.png)
+![pandas DataFrame after updating index column](https://images.prismic.io/oxylabs-sm/N2RkYjY1ZDAtMjBiNS00NTBjLWE5YjctNDg5Y2VmOWIyMThm_image2_fixed_index_column.png?auto=compress,format&rect=0,0,1392,351&w=1392&h=351&fm=webp&q=75)
 
 The data types can be checked by calling `info()` function of the DataFrame as follows:
 
@@ -163,13 +163,13 @@ pd.read_html(html, parse_dates=['Updated'])
 
 This time, if the `.info()` function is called, the DataFrame will have correct data types:
 
-![DataFrame with date-time data type](https://oxylabs.io/blog/images/2021/09/image3_fixed_dates.png)
+![DataFrame with date-time data type](https://images.prismic.io/oxylabs-sm/OWFlMDIxNmYtMzRlYy00M2YyLWI5YzAtOTk4MjJlZTUyYTBl_image3_fixed_dates.png?auto=compress,format&rect=0,0,1390,715&w=1390&h=715&fm=webp&q=75)
 
 ## Invalid and imperfect HTML
 
 The HTML that we used in the previous example is valid. If the heading in the HTML table is embedded in regular `<tr>` and `<td>` tags, the DataFrame will be created with default numeric columns.
 
-![Column's headings as rows](https://oxylabs.io/blog/images/2021/09/image6_invalid_html.png)
+![Column's headings as rows](https://images.prismic.io/oxylabs-sm/Y2FhNTNkMWQtMTJkYy00NWU4LTkwMGEtYTdiZjcwYmM2YmNm_image6_invalid_html.png?auto=compress,format&rect=0,0,1386,327&w=1386&h=327&fm=webp&q=75)
 
 In such cases, you can use another optional parameter of pandas `read_html` method as follows:
 
@@ -188,7 +188,7 @@ population_file= pd.read_html("/tmp/population.html",parse_dates=['Updated'],ind
 population_file[0]
 ```
 
-![HTML file converted to DataFrame](https://oxylabs.io/blog/images/2021/09/image5_reading_files.png)
+![HTML file converted to DataFrame](https://images.prismic.io/oxylabs-sm/OTNjOGZjNWYtMDg2OS00NjdhLTllYTEtZTE1OTQyODYwMGZi_image5_reading_files.png?auto=compress,format&rect=0,0,1373,309&w=1373&h=309&fm=webp&q=75)
 
 ## Extracting HTML tables from URLs
 
@@ -207,9 +207,7 @@ To get to the exact table, there are multiple approaches possible.
 
 To use regular expressions, first, we need to identify any pattern inside the `<table>` that we want to scrape. Open the URL in a browser, right-click the table, and click inspect.
 
-![HTML table markup](https://oxylabs.io/blog/images/2021/09/image7_wikipedia.png)
-
-
+![HTML table markup](https://images.prismic.io/oxylabs-sm/YTU2NDg4ZDYtY2RlYS00M2I5LWI4MjMtNTU2MGRjYWY1ZjZj_image7_wikipedia.png?auto=compress,format&rect=0,0,1300,466&w=1300&h=466&fm=webp&q=75)
 
 This regular expression can now be supplied to the optional parameter match of the pandas `read_html` function.
 
