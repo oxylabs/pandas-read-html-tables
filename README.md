@@ -277,7 +277,7 @@ And finally, this data can be plotted as a horizontal bar chart:
 top_df.plot.barh(x='Author',y='BookCount',figsize=(12,5))
 ```
 
-![Authors with three or more books in Top 100 list](https://oxylabs.io/blog/images/2021/09/image8_author_chart.png)
+![Authors with three or more books in Top 100 list](https://images.prismic.io/oxylabs-sm/NjRhOWRjMzctNjczOS00ZjlkLWJkOTAtODI0MGUyYWQxOWE4_image8_author_chart.png?auto=compress,format&rect=0,0,1390,532&w=1390&h=532&fm=webp&q=75)
 
 
 If you wish to find out more about How to Read HTML Tables with Pandas, see our [blog post](https://oxy.yt/hrFW).
