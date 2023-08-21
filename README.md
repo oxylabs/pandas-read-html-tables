@@ -21,11 +21,31 @@ For a detailed explanation, see our [blog post](https://oxy.yt/hrFW).
 
 ## Getting Started
 
-Pandas can be installed using the `pip` command or `conda` command, if you’re using Anaconda.
+Pandas can be installed using the `pip` command or `conda` command if you’re using Anaconda.
 
 ```shell
 pip3 install pandas
 conda install pandas
+```
+
+You must also install `lxml`, `html5lib`, `BeautifulSoup4`, and `Matplotlib` libraries to facilitate reading & parsing the HTML and plotting the information.
+
+Here are the `pip` commands to install:
+
+```shell
+pip3 install lxml
+pip3 install html5lib
+pip3 install BeautifulSoup4
+pip3 install matplotlib
+```
+
+ If you are using the `conda` prompt, use the following commands:
+
+```shell
+conda install lxml
+conda install html5lib
+conda install BeautifulSoup4
+conda install matplotlib
 ```
 
 In the following line of the code, a variable contains HTML. You should note that we’re using Python’s triple quote conventions to store multiline strings in a variable easily.
@@ -85,7 +105,7 @@ Let’s check the content of the DataFrame by printing it.
 print(df_list[0])
 ```
 
-When you run from the terminal, the date from HTML tables will be extracted and displayed as follows:
+When you run from the terminal, the data from HTML tables will be extracted and displayed as follows:
 
 ```shell
 $ python3 read_html.py
@@ -161,7 +181,7 @@ pd.read_html(html_no_head,header=0)
 
 Extracting data from HTML tables that are in HTML files is almost the same as reading from strings.
 
-Instead of the HTML string, the pandas `read_html` needs the file path, relative or absolute.
+Instead of the HTML string, the pandas `read_html` needs the file path, relative or absolute. Assuming that the **population.html** file contains the HTML table with population information which is currently located in the **tmp** folder, we can read the HTML table as follows:
 
 ```
 population_file= pd.read_html("/tmp/population.html",parse_dates=['Updated'],index_col=0)
@@ -177,15 +197,15 @@ Pandas can directly connect to web URLs and read HTML tables. This functionality
 The first step is to extract the list of tables using the Pandas `read_html` function. Next, we’ll check the length of the tables returned.
 
 ```python
-import pandas as pd 
-list_of_df = pd.read_html("https://en.wikipedia.org/wiki/Science_Fiction:_The_100_Best_Novels")
+import pandas as pd
+list_of_df = pd.read_html("https://en.wikipedia.org/w/index.php?title=Science_Fiction:_The_100_Best_Novels&oldid=1091082777")
 len(list_of_df)
 # OUTPUT: 7
 ```
 
 To get to the exact table, there are multiple approaches possible. 
 
-To use regular expressions, first, we need to identify any pattern inside the `<table>` that we want to scrape. Open the URL in a browser, and right-click the table, and click inspect.
+To use regular expressions, first, we need to identify any pattern inside the `<table>` that we want to scrape. Open the URL in a browser, right-click the table, and click inspect.
 
 ![HTML table markup](https://oxylabs.io/blog/images/2021/09/image7_wikipedia.png)
 
@@ -195,7 +215,7 @@ This regular expression can now be supplied to the optional parameter match of t
 
 ```python
 import pandas as pd
-list_of_df = pd.read_html("https://en.wikipedia.org/wiki/Science_Fiction:_The_100_Best_Novels", match='The 100 Best Novels')
+list_of_df = pd.read_html("https://en.wikipedia.org/w/index.php?title=Science_Fiction:_The_100_Best_Novels&oldid=1091082777", match='The 100 Best Novels')
 len(list_of_df)
 # OUTPUT: 1
 ```
@@ -203,7 +223,7 @@ len(list_of_df)
 One more way to extract the required table is by using the specific attributes:
 
 ```python
-pd.read_html("https://en.wikipedia.org/wiki/Science_Fiction:_The_100_Best_Novels", attrs={'class':"wikitable"})
+pd.read_html("https://en.wikipedia.org/w/index.php?title=Science_Fiction:_The_100_Best_Novels&oldid=1091082777", attrs={'class':"wikitable"})
 ```
 
 ## Analyzing and visualizing scraped data
