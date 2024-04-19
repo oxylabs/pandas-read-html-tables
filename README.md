@@ -5,6 +5,7 @@
 
 [<img src="https://img.shields.io/static/v1?label=&message=Pandas&color=brightgreen" />](https://github.com/topics/pandas) [<img src="https://img.shields.io/static/v1?label=&message=Python&color=important" />](https://github.com/topics/python)
 
+[![](https://dcbadge.vercel.app/api/server/eWsVUJrnG5)](https://discord.gg/GbxmdGhZjq)
 
 - [Getting Started](#getting-started)
 - [Cleanup and processing of HTML table data](#cleanup-and-processing-of-html-table-data)
