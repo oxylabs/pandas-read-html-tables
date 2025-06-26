@@ -1,6 +1,6 @@
 # How to Read HTML Tables with Pandas
 
-[![Oxylabs promo code](https://raw.githubusercontent.com/oxylabs/product-integrations/refs/heads/master/Affiliate-Universal-1090x275.png)](https://oxylabs.go2cloud.org/aff_c?offer_id=7&aff_id=877&url_id=112)
+[![Oxylabs promo code](https://raw.githubusercontent.com/oxylabs/product-integrations/refs/heads/master/Affiliate-Universal-1090x275.png)](https://oxylabs.io/pages/gitoxy?utm_source=877&utm_medium=affiliate&groupid=877&utm_content=pandas-read-html-tables-github&transaction_id=102f49063ab94276ae8f116d224b67)
 
 
 [<img src="https://img.shields.io/static/v1?label=&message=Pandas&color=brightgreen" />](https://github.com/topics/pandas) [<img src="https://img.shields.io/static/v1?label=&message=Python&color=important" />](https://github.com/topics/python)
